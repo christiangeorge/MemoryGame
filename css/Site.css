@@ -1,0 +1,222 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 0px;
+    background-color: #3385ff;
+    test: #99c2ff
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.CharacterAttributeTitle
+{
+    
+}
+.CharacterAttributeValue
+{
+
+}
+.CharacterAttributeButtons
+{
+
+}
+.CharacterAttributeRacialBonus
+{
+
+}
+.CharacterAttributeFinalValue
+{
+    border: 1px solid Blue;
+    background-color: Gold;
+}
+
+
+.navbar-cg-custom {
+  background-color: #3385ff;
+  border-color: #3385ff;
+}
+
+.navbar-cg-custom .navbar-brand {
+  color: white;
+}
+
+.navbar-cg-custom .navbar-brand:hover,
+.navbar-cg-custom .navbar-brand:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.navbar-cg-custom .navbar-text {
+  color: #999999;
+}
+
+.navbar-cg-custom .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-cg-custom .navbar-nav > li > a:hover,
+.navbar-cg-custom .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: transparent;
+  border-bottom: 1px white solid;
+}
+
+.navbar-cg-custom .navbar-nav > .active > a,
+.navbar-cg-custom .navbar-nav > .active > a:hover,
+.navbar-cg-custom .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #080808;
+}
+
+.navbar-cg-custom .navbar-nav > .disabled > a,
+.navbar-cg-custom .navbar-nav > .disabled > a:hover,
+.navbar-cg-custom .navbar-nav > .disabled > a:focus {
+  color: #444444;
+  background-color: transparent;
+}
+
+.navbar-cg-custom .navbar-toggle {
+  border-color: #333333;
+}
+
+.navbar-cg-custom .navbar-toggle:hover,
+.navbar-cg-custom .navbar-toggle:focus {
+  background-color: #333333;
+}
+
+.navbar-cg-custom .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+
+.navbar-cg-custom .navbar-collapse,
+.navbar-cg-custom .navbar-form {
+  border-color: #101010;
+}
+
+.navbar-cg-custom .navbar-nav > .open > a,
+.navbar-cg-custom .navbar-nav > .open > a:hover,
+.navbar-cg-custom .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #080808;
+}
+
+.navbar-cg-custom .navbar-nav > .dropdown > a:hover .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.navbar-cg-custom .navbar-nav > .dropdown > a .caret {
+  border-top-color: #999999;
+  border-bottom-color: #999999;
+}
+
+.navbar-cg-custom .navbar-nav > .open > a .caret,
+.navbar-cg-custom .navbar-nav > .open > a:hover .caret,
+.navbar-cg-custom .navbar-nav > .open > a:focus .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .navbar-cg-custom .navbar-nav .open .dropdown-menu > .dropdown-header {
+    border-color: #080808;
+  }
+  .navbar-cg-custom .navbar-nav .open .dropdown-menu > li > a {
+    color: #999999;
+  }
+  .navbar-cg-custom .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-cg-custom .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+    background-color: transparent;
+  }
+  .navbar-cg-custom .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-cg-custom .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-cg-custom .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #080808;
+  }
+  .navbar-cg-custom .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-cg-custom .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-cg-custom .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #444444;
+    background-color: transparent;
+  }
+}
+
+.navbar-cg-custom .navbar-link {
+  color: #999999;
+}
+
+.navbar-cg-custom .navbar-link:hover {
+  color: #ffffff;
+}
+
+
+.jumbotron-custom {
+  padding: 30px;
+  margin-bottom: 30px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 2.1428571435;
+  color: white;
+  background-color: #3385ff;
+}
+
+.jumbotron-custom h1 {
+  line-height: 1;
+  color: inherit;
+}
+
+.jumbotron-custom p {
+  line-height: 1.4;
+}
+
+.container .jumbotron-custom {
+  border-radius: 6px;
+}
+
+@media screen and (min-width: 768px) {
+  .jumbotron-custom {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .container .jumbotron-custom {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .jumbotron-custom h1 {
+    font-size: 63px;
+  }
+}
+
+.footer{
+    padding: 10px; 
+    background-color: #3385ff;    
+    width: 100%; 
+    color: white; 
+}
+
+.workingbackground{
+     background-color: #99c2ff;
+     width: 100%;
+     padding: 50px;
+     min-height: 550px;
+}

@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rememory</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="./css/site.css" rel="stylesheet"/>	
+</head>
+<body>
+    <div class="navbar navbar-cg-custom navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://github.com/christiangeorge">github.com/christiangeorge</a>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron-custom">
+        
+		<h2>ReMemory</h2>
+		<h4>Quick weekend project to familiarize myself with knockout.js.</h4>
+    </div>
+    <div class="workingbackground">
+        <div class="container body-content">
+	`		<div class="row">
+				<div class="panel panel-default">
+					<div class="panel-heading form-inline">
+						<button type="button" class="btn btn-default" id="btnMenu">Menu</button>
+						<button type="button" class="btn btn-default" id="btnStartGame">Start Game</button>
+						<span data-bind="if: GameState() == 'Playing'">
+							<strong data-bind="text: 'Turn:' + (Turns().length + 1)"></strong>
+						</span>
+					</div>
+					<div class="panel-body" data-bind="if: GameState() == 'Playing'">
+						<div class="panel" data-bind="foreach: GameBoard()">
+							<div class="panel-body col-xs-3 col-sm-3 col-md-3 text-center" data-bind="click: Memory.clickCard">
+								<div data-bind="if: Showing()">
+									<img data-bind="attr:{src: CardImageUrl()}" style="width: 100%; max-width: 113px" />
+								</div>
+								<div data-bind="if: !Showing()">
+									<img data-bind="attr:{src: CardBack}" style="width: 100%; max-width: 113px" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel-body text-center" data-bind="if: GameState() == 'Settings'">
+						<button type="button" class="btn btn-default" id="menuBtnNewGame" data-bind="click: Memory.clickNewGame">New Game</button>
+					</div>
+					<div class="panel-body text-center" data-bind="if: GameState() == 'GameWon'">
+						<div>Congratulations, you have found all of the matches!</div>
+						<div>It took you <strong data-bind="text: Turns().length"></strong> turns to complete.</div>
+						<button type="button" class="btn btn-default" id="menuBtnNewGame" data-bind="click: Memory.clickNewGame">New Game</button>
+					</div>
+					<div class="panel-body text-center" data-bind="if: GameState() == 'Menu'">
+						<button type="button" class="btn btn-default" id="menuBtnNewGame" data-bind="click: Memory.clickNewGame">New Game</button>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+    <div style="clear: both;">
+    </div>           
+    <footer class="footer">
+        <p>&copy; 2016 - github.com/christiangeorge</p>
+    </footer>
+	<script src="./scripts/jquery-1.10.2.min.js"></script>
+	<script src="./scripts/bootstrap.min.js"></script>
+	<script src="./scripts/Memory.js"></script>
+	<script src="./scripts/knockout-3.4.0.js"></script>
+	
+    <script language="javascript">
+        $().ready(function () {
+            Memory.isDebug = true; //TODO: Remove
+            KO_Memory.bind();
+        });
+        $("#btnClear").click(function () {
+            KO_Memory.viewModel.ClearGameBoard();
+        });
+        $("#btnMenu").click(function () {
+            KO_Memory.viewModel.ChangeGameState("Menu");
+        });
+        $("#btnStartGame").click(function () {
+            KO_Memory.viewModel.ResetGame();
+        });
+    </script>
+    
+</body>
+</html>
